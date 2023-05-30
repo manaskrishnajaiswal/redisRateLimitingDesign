@@ -1,3 +1,4 @@
+import Dropdown from "@/components/Dropdown";
 import Head from "next/head";
 
 export default function Home() {
@@ -13,7 +14,21 @@ export default function Home() {
           <h1 className="text-xl md:text-5xl text-center font-bold py-10 border-b">
             Rate Limit Project
           </h1>
-          <div className="container mx-auto py-3"></div>
+          <div className="container mx-auto py-3">
+            <div className="mx-auto py-3">
+              <p className="text-center">
+                The server will allow sending{" "}
+                <span className="font-bold">
+                  max 10 API requests within a 10 second window
+                </span>
+                . If you send more than that, all additional requests will be
+                blocked
+              </p>
+            </div>
+            <div className="w-1/2 py-3 mx-auto">
+              <Dropdown />
+            </div>
+          </div>
         </>
       </main>
     </>
